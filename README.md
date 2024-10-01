@@ -1,4 +1,4 @@
-# Репозиторий документации UE плагина RYM_Utilities и прочих статей связанных c тех.арт работой Carrot Broadcast
+Хранилище для публичного доступа к документации по некоторым методам и инструментам, используемым и разработанным в Carrot Broadcast
 
 Создан на основен MkDocs [шаблона](https://github.com/jobindjohn/obsidian-publish-mkdocs) под авторством [@jobindjhon](https://github.com/jobindjohn)
 
