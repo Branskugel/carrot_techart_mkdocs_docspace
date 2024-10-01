@@ -1,4 +1,4 @@
-site_name: obsidian-mkdocs template
+site_name: Carrot tech art docspace
 
 theme:
     name: 'material'
@@ -25,20 +25,38 @@ theme:
 # Extensions
 markdown_extensions:
   - footnotes
-  # - attr_list
+  - abbr
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - tables
+  - md_in_html
+  - admonition
   - pymdownx.arithmatex:
       generic: true
-  # - pymdownx.superfences
-  # - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   # - pymdownx.magiclink
   - pymdownx.tasklist:
       custom_checkbox: true
   - def_list
+  - pymdownx.smartsymbols
+  - pymdownx.details
   - pymdownx.critic
   - pymdownx.caret
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -50,18 +68,27 @@ markdown_extensions:
 
 plugins:
   - search
-  - roamlinks
-  - blog
-  - rss:
-      match_path: blog/posts/.* 
-      date_from_meta:
-        as_creation: date
-      categories:
-        - categories
-        - tags
+  #- roamlinks
+  #- blog
+  - obsidian-support
+  - obsidian-bridge
+  - callouts
+  - ezlinks
+  # - rss:
+  #     match_path: blog/posts/.* 
+  #     date_from_meta:
+  #       as_creation: date
+  #     categories:
+  #       - categories
+  #       - tags
 
 extra_javascript:
-  - javascripts/mathjax.js
+  - _assets/javascripts/mathjax.js
+  - https://code.jquery.com/jquery-3.7.1.min.js
+  - _assets/javascripts/obsidian_tags.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://unpkg.com/mermaid/dist/mermaid.min.js 
+
+extra_css:
+  - assets/css/obsidian_tags.css
