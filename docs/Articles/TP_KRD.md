@@ -7,6 +7,7 @@
 >* CarrotEditor - v5.0
 >* CARROT_Tools - v0.001
 >* SideFx_Labs - v20.0
+>* RYM_Utilities - v1.26.6
 
 ### Установка
 
@@ -26,6 +27,7 @@
 ![[TP_KRD_Outliner.png]]{style="border-radius: 5px"}
 
 Объекты расположенные на уровне lvl_krd_studio не трогаем и не редактируем, на уровне lvl_RENAME - работаем.
+
 $\quad$Источники света привязанные к пустышке EXAMPLE_StudioLights присутствуют исключительно для примера и чтобы в сцене не было темно при первом открытии проекта.
 
 
