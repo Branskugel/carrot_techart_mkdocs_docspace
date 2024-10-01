@@ -91,4 +91,4 @@ extra_javascript:
   - https://unpkg.com/mermaid/dist/mermaid.min.js 
 
 extra_css:
-  - assets/css/obsidian_tags.css
+  - _assets/css/obsidian_tags.css
