@@ -51,64 +51,64 @@
 
 ![[BP_SolidSplineCloner_DefaultCopyParams.png]]{style="border-radius: 5px"}
 
-##### Blueprint class
+###### Blueprint class
 
 Класс, используемый копиями в случае, если свойство [[#Instancing Type]] установлено на значение **Blueprint**
 
 #experiment
 
-##### Mesh|Меш
+###### Mesh
 
 **Static Mesh** ассет, используемый копиями в случае, если свойство [[#Instancing Type]] установлено на значение **Static Mesh**
 
 
-%%##### bPickObjectFromArray ✅%% 
+###### bPickObjectFromArray ✅
 
 
 Переключает источник объекта (Mesh или Blueprint class) на array [[#Mesh Array]] или [[#Blueprints Array]] соответственно - вместо указанных в свойствах выше, объекты будут выбираться из этих списков.
 
-##### PickObjectIndex
+###### PickObjectIndex
 
 Индекс элемента из соответствующего списка объектов.
 
 
-##### bPickRandomObject ✅
+###### bPickRandomObject ✅
 
 Переключает использование случайного индекса объекта из списка вместо параметра **PickObjectIndex**
 
 
 
-##### bOverrideMaterials ✅
+###### bOverrideMaterials ✅
 
 Переключает переназначение материалов объекта на те, что заданы в параметре **OverrideMaterials**
 
 
-##### bUseOverlayMaterial ✅
+###### bUseOverlayMaterial ✅
 
 Переключает переназначение материалов объекта на заданный в параметре **OverlayMaterial**
 
 
-##### bPickOverlayMaterialFromArray ✅
+###### bPickOverlayMaterialFromArray ✅
 
 Переключает переназначение материалов объекта на те, что заданы в параметре [[#Overlay Materials]]
 
 
-##### PickOverlayMaterialIndex
+###### PickOverlayMaterialIndex
 
 Индекс **Overlay** материала из списка.
 
 
-##### bPickRandomOverlayMaterial ✅
+###### bPickRandomOverlayMaterial ✅
 
 Переключает использование случайного индекса **Overlay** материала из списка вместо параметра **PickOverlayMaterialIndex**
 
 
-##### bRandomizeSlotMaterials ✅
+###### bRandomizeSlotMaterials ✅
 
 Переключает использование случайного индекса материала для слота из списка [[#PerSlotMaterialsArray]] вместо параметра **PickObjectIndex**
 
 
-##### PerSlotMaterialsArray
+###### PerSlotMaterialsArray
 
 По-слотовый список материалов для переназначения на объекте. Подробнее в разделе [[#О работе с материалами|о работе с материалами]]
 
