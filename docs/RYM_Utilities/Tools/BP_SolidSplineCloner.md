@@ -3,7 +3,7 @@
 #longread #RYM_Utilities
 
 
-## Параметры
+<h2 id="Parameters">Параметры</h2>
 
 ![[BP_SolidSplineCloner_InstancingParams.png]]{style="border-radius: 5px"}
 
@@ -43,11 +43,11 @@
 Раздел с настройками визуализации информации о копиях во вьюпорте. Подробнее в разделе [[#Отладка]]
 
 
-### Параметры копий { \#CopyParameters }
+<h3 id="CopyParameters">Параметры копий</h3>
 
-Делятся на два раздела: **параметры по умолчанию** и [[BP_SolidSplineCloner#Параметры сгенерированных копий|параметры сгенерированных копий]]
+Делятся на два раздела: **параметры по умолчанию** и [[#CopyParameters|параметры сгенерированных копий]]
 
-#### Параметры по умолчанию
+<h4 id="DefaultParams">Параметры по умолчанию</h4>
 
 ![[BP_SolidSplineCloner_DefaultCopyParams.png]]{style="border-radius: 5px"}
 
@@ -109,7 +109,7 @@
 
 ###### PerSlotMaterialsArray
 
-По-слотовый список материалов для переназначения на объекте. Подробнее в разделе [[#О работе с материалами|о работе с материалами]]
+По-слотовый список материалов для переназначения на объекте. Подробнее в разделе [[#WorkingWithMaterials|о работе с материалами]]
 
 
 
@@ -118,20 +118,20 @@
 
 
 
-#### Параметры сгенерированных копий
+<h4 id="GeneratedInstancecParams">Параметры сгенерированных копий</h4>
 
 
 ![[BP_SolidSplineCloner_GeneratedInstances_Params_1.png]]{style="border-radius: 5px"}
 
 #TODO дописать
 
-### О работе с материалами
+<h3 id="WorkingWithMaterials">О работе с материалами</h3>
 
 #TODO дописать
 
 
 
-### Отладка
+<h3 id="Debugging">Отладка</h3>
 
 #TODO дописать
 
