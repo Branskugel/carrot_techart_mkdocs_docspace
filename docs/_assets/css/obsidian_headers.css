@@ -1,13 +1,25 @@
-.md-typeset h5 {
-  color: #000000eb;
+.md-typeset h5, .md-typeset h6 {
+  color: var(--md-default-fg-color);
     text-transform: capitalize;
   }
 
-/* 
-  [data-md-color-scheme=default] h5 {
-    background-color: #000000;
+  .md-typeset h2 {
+    font-weight: 500;
   }
 
-  [data-md-color-scheme=slate] h5hash {
-    background-color: #ffffff;
+  .md-typeset h5 {
+    font-size: 1.1em;
+  }
+
+  .md-typeset h6 {
+    font-size: 1em;
+  }
+
+/* 
+  [data-md-color-scheme=default] :root {
+    --theme-dp-header-color: #000000;
+  }
+
+  [data-md-color-scheme=slate] :root {
+    --theme-dp-header-color: #ffffff;
   } */
