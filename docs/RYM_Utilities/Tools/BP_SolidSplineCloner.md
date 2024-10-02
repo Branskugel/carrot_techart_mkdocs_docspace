@@ -45,7 +45,7 @@
 
 <h3 id="CopyParameters">Параметры копий</h3>
 
-Делятся на два раздела: **параметры по умолчанию** и [[#CopyParameters|параметры сгенерированных копий]]
+Делятся на два раздела: **параметры по умолчанию** и [[BP_SolidSplineCloner#generatedinstancesparams|параметры сгенерированных копий]]
 
 <h4 id="DefaultParams">Параметры по умолчанию</h4>
 
@@ -118,7 +118,7 @@
 
 
 
-<h4 id="GeneratedInstancecParams">Параметры сгенерированных копий</h4>
+<h4 id="generatedinstancesparams">Параметры сгенерированных копий</h4>
 
 
 ![[BP_SolidSplineCloner_GeneratedInstances_Params_1.png]]{style="border-radius: 5px"}
