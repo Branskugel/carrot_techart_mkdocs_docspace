@@ -3,13 +3,14 @@
 #longread #RYM_Utilities
 
 
-<h2 id="parameters">Параметры<a class="headerlink" href="#parameters" title="Permanent link">¶</a>
-</h2>
+## Параметры {: id="parameters"}
+
+### Instancing
 
 ![[BP_SolidSplineCloner_InstancingParams.png]]{style="border-radius: 5px"}
 
 
-###### Instancing Type
+#### Instancing Type
 
 Тип объекта копируемого инструментом вдоль траектории сплайна
 
@@ -18,39 +19,39 @@
 * **Instanced Static Mesh** - не имплементировано
 * **Hierarchical Instanced Static Mesh** - не имплементировано
 
-###### Amount
+#### Amount
 
 Количество желаемых объектов. Рекомендуется резко это значение не дёргать, особенно если используете тяжёлые (геометрия, логика) объекты для копирования.
 
-###### Fit Curve Length ✅
+#### Fit Curve Length ✅
 
 Переключает инструмент на вычисление количества, необходимого для заполнения длины кривой, с учётом их размеров и сдвигов относительно друг друга. <span style="color:red">Пользоваться осторожно</span>❗
 
-###### Copy Default Settings
+#### Copy Default Settings
 
 Настройки по умолчанию, используемые для новых копий. Подробнее в разделе [[#Параметры копий]]
 
-###### Use Collision for Blueprint Length Calculation ✅
+#### Use Collision for Blueprint Length Calculation ✅
 
 Переключает использование коллизий блюпринт-объектов для подсчёта их длины
 Работа этого параметра может быть пересмотрена в будущем.
 
-###### Prevent Creation Of Overlapping Extras ✅
+#### Prevent Creation Of Overlapping Extras ✅
 
 Переключает механизм предотвращения создания пересекающихся избыточных копий. Работа этого параметра может быть пересмотрена в будущем.
 
-###### Visualization
+#### Visualization
 
 Раздел с настройками визуализации информации о копиях во вьюпорте. Подробнее в разделе [[#Отладка]]
 
 
-<h3 id="copy-parameters">Параметры копий<a class="headerlink" href="#copy-parameters" title="Permanent link">¶</a>
-</h3>
+## Параметры копий {: id="copy-parameters"}
 
-Делятся на два раздела: **параметры по умолчанию** и [[BP_SolidSplineCloner#generated-instances-params|параметры сгенерированных копий]]
+Делятся на два раздела: **параметры по умолчанию** и [[#generated-instances-params|параметры сгенерированных копий]]
 
-<h4 id="default-params">Параметры по умолчанию<a class="headerlink" href="#default-params" title="Permanent link">¶</a>
-</h4>
+### Параметры по умолчанию {: id="copy-default-settings"}
+
+**Copy Default Settings**
 
 ![[BP_SolidSplineCloner_DefaultCopyParams.png]]{style="border-radius: 5px"}
 
@@ -128,18 +129,19 @@
 
 #### Параметры сгенерированных копий {: id="generated-instances-params"}
 
+**Generated Instances Settings**
 
 ![[BP_SolidSplineCloner_GeneratedInstances_Params_1.png]]{style="border-radius: 5px"}
 
 #TODO дописать
 
-<h3 id="working-with-materials">О работе с материалами<a class="headerlink" href="#working-with-materials" title="Permanent link">¶</a></h3>
+### О работе с материалами {: id="working-with-materials"}
 
 #TODO дописать
 
 
 
-<h3 id="debugging">Отладка<a class="headerlink" href="#debugging" title="Permanent link">¶</a></h3>
+### Отладка {: id="debugging"}
 
 #TODO дописать
 

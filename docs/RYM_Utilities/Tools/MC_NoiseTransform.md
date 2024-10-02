@@ -4,13 +4,13 @@
 
 Компонент случайных трансформаций.
 
-## Применение
+## Применение {: id="purpose"}
 
 <iframe src="https://giphy.com/embed/3orifhgq0Z0kb8qxpu" width="260" height="" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 Позволяет проанимировать словно по нойзу движение, вращение и масштабирование объекта. 
 
-## Инструкция
+## Инструкция {: id="how-to"}
 
 1. Находим через поиск в контент браузере в корне проекта или папке плагина по названию. 
    `Если не находится, то включаем свойство Show Plugin Content`
@@ -18,7 +18,7 @@
 3. Настраиваем под свои нужды.
 
 
-## Параметры
+## Параметры {: id="parameters"}
 
 ![[MC_NoiseTransform_Setup.png]]{style="border-radius: 5px"}
 
