@@ -3,7 +3,8 @@
 #longread #RYM_Utilities
 
 
-<h2 id="Parameters">Параметры</h2>
+<h2 id="parameters">Параметры<a class="headerlink" href="#parameters" title="Permanent link">¶</a>
+</h2>
 
 ![[BP_SolidSplineCloner_InstancingParams.png]]{style="border-radius: 5px"}
 
@@ -117,11 +118,13 @@
 #TODO дописать
 
 
+```
 
-<h4 id="generated-instances-params">
-Параметры сгенерированных копий
-<a class="headerlink" href="#generated-instances-params" title="Permanent link">¶</a>
-</h4>
+<h4 id="generated-instances-params">Параметры сгенерированных копий<a class="headerlink" href="#generated-instances-params" title="Permanent link">¶</a>
+</h4>```
+```
+
+#### Параметры сгенерированных копий
 
 
 ![[BP_SolidSplineCloner_GeneratedInstances_Params_1.png]]{style="border-radius: 5px"}
