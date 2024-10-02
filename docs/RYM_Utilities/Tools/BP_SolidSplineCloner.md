@@ -118,7 +118,10 @@
 
 
 
-<h4 id="generated-instances-params">Параметры сгенерированных копий</h4>
+<h4 id="generated-instances-params">
+Параметры сгенерированных копий
+<a class="headerlink" href="#generated-instances-params" title="Permanent link">¶</a>
+</h4>
 
 
 ![[BP_SolidSplineCloner_GeneratedInstances_Params_1.png]]{style="border-radius: 5px"}
