@@ -44,11 +44,13 @@
 Раздел с настройками визуализации информации о копиях во вьюпорте. Подробнее в разделе [[#Отладка]]
 
 
-<h3 id="copy-parameters">Параметры копий</h3>
+<h3 id="copy-parameters">Параметры копий<a class="headerlink" href="#copy-parameters" title="Permanent link">¶</a>
+</h3>
 
 Делятся на два раздела: **параметры по умолчанию** и [[BP_SolidSplineCloner#generated-instances-params|параметры сгенерированных копий]]
 
-<h4 id="default-params">Параметры по умолчанию</h4>
+<h4 id="default-params">Параметры по умолчанию<a class="headerlink" href="#default-params" title="Permanent link">¶</a>
+</h4>
 
 ![[BP_SolidSplineCloner_DefaultCopyParams.png]]{style="border-radius: 5px"}
 
@@ -131,13 +133,13 @@
 
 #TODO дописать
 
-<h3 id="working-with-materials">О работе с материалами</h3>
+<h3 id="working-with-materials">О работе с материалами<a class="headerlink" href="#working-with-materials" title="Permanent link">¶</a></h3>
 
 #TODO дописать
 
 
 
-<h3 id="debugging">Отладка</h3>
+<h3 id="debugging">Отладка<a class="headerlink" href="#debugging" title="Permanent link">¶</a></h3>
 
 #TODO дописать
 
