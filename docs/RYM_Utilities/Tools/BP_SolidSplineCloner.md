@@ -113,7 +113,7 @@
 
 ###### PerSlotMaterialsArray
 
-По-слотовый список материалов для переназначения на объекте. Подробнее в разделе [[BP_SolidSplineCloner#working-with-materials|о работе с материалами]]
+По-слотовый список материалов для переназначения на объекте. Подробнее в разделе [[#working-with-materials|о работе с материалами]]
 
 
 
@@ -121,17 +121,29 @@
 #TODO дописать
 
 
-```
-
-<h4 id="generated-instances-params">Параметры сгенерированных копий<a class="headerlink" href="#generated-instances-params" title="Permanent link">¶</a>
-</h4>```
-```
-
-#### Параметры сгенерированных копий {: id="generated-instances-params"}
+### Параметры сгенерированных копий {: id="generated-instances-params"}
 
 **Generated Instances Settings**
 
 ![[BP_SolidSplineCloner_GeneratedInstances_Params_1.png]]{style="border-radius: 5px"}
+
+#### Кнопки
+
+* **Object Pick Override On/Off** - переключение параметра [[#bOverrideObject ✅]]
+* **Pick Object from Array On/Off** - переключение параметра [[#bPickObjectFromArray ✅]]
+
+Работают согласно диапазону индексов **Object Edits indices Range**. Когда хотя бы один из индексов равен **-1**, работают со всеми копиями.
+
+#### Индивидуальные параметры копий
+
+**Copies Data Array**
+
+##### bOverrideObject ✅
+
+Переключает переопределение выбора инстанцируемого объекта (меша или блюпринта) для копии.
+
+
+
 
 #TODO дописать
 
