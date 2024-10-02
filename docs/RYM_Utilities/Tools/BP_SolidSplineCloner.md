@@ -126,7 +126,7 @@
 </h4>```
 ```
 
-#### Параметры сгенерированных копий
+#### Параметры сгенерированных копий {: id="generated-instances-params"}
 
 
 ![[BP_SolidSplineCloner_GeneratedInstances_Params_1.png]]{style="border-radius: 5px"}
