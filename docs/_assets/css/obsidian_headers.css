@@ -1,0 +1,13 @@
+.md-typeset h5 {
+  color: #000000eb;
+    text-transform: capitalize;
+  }
+
+/* 
+  [data-md-color-scheme=default] h5 {
+    background-color: #000000;
+  }
+
+  [data-md-color-scheme=slate] h5hash {
+    background-color: #ffffff;
+  } */
