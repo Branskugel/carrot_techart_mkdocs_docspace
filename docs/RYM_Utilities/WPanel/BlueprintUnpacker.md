@@ -6,7 +6,7 @@
 
 ![[WidgetPanel_BlueprintUnpacker.png]]{style="border-radius: 5px"}
 
-Если активирована опция <mark style="color:hsl(0, 0%,100%);background-color:hsl(0, 0%, 25%);border-radius: 6px;padding: 3px;">УДАЛИТЬ ИСХОДНИКИ</mark>, операция удалит со сцены обрабатываемые акторы, в противном случае исходный объект будет скрыт.
+Если активирована опция <mark style="color:hsl(0, 0%,100%);background-color:hsl(0, 0%, 25%);border-radius: 6px;padding: 3px;">УДАЛИТЬ ИСХОДНИКИ</mark> , операция удалит со сцены обрабатываемые акторы, в противном случае исходный объект будет скрыт.
 
 ??? example "Пример-сравнение"
 

@@ -2,7 +2,6 @@
 
 #longread #RYM_Utilities
 
-
 ## Параметры {: id="parameters"}
 
 ### Instancing
@@ -65,7 +64,7 @@
 **Static Mesh** ассет, используемый копиями в случае, если свойство [[#Instancing Type]] установлено на значение **Static Mesh**
 
 
-###### bPickObjectFromArray ✅
+###### PickObjectFromArray ✅
 
 
 Переключает источник объекта (Mesh или Blueprint class) на array [[#Mesh Array]] или [[#Blueprints Array]] соответственно - вместо указанных в свойствах выше, объекты будут выбираться из этих списков.
@@ -75,23 +74,23 @@
 Индекс элемента из соответствующего списка объектов.
 
 
-###### bPickRandomObject ✅
+###### PickRandomObject ✅
 
 Переключает использование случайного индекса объекта из списка вместо параметра **PickObjectIndex**
 
 
 
-###### bOverrideMaterials ✅
+###### OverrideMaterials ✅
 
 Переключает переназначение материалов объекта на те, что заданы в параметре **OverrideMaterials**
 
 
-###### bUseOverlayMaterial ✅
+###### UseOverlayMaterial ✅
 
 Переключает переназначение материалов объекта на заданный в параметре **OverlayMaterial**
 
 
-###### bPickOverlayMaterialFromArray ✅
+###### PickOverlayMaterialFromArray ✅
 
 Переключает переназначение материалов объекта на те, что заданы в параметре [[#Overlay Materials]]
 
@@ -101,12 +100,12 @@
 Индекс **Overlay** материала из списка.
 
 
-###### bPickRandomOverlayMaterial ✅
+###### PickRandomOverlayMaterial ✅
 
 Переключает использование случайного индекса **Overlay** материала из списка вместо параметра **PickOverlayMaterialIndex**
 
 
-###### bRandomizeSlotMaterials ✅
+###### RandomizeSlotMaterials ✅
 
 Переключает использование случайного индекса материала для слота из списка [[#PerSlotMaterialsArray]] вместо параметра **PickObjectIndex**
 
@@ -129,16 +128,16 @@
 
 #### Кнопки
 
-* **Object Pick Override On/Off** - переключение параметра [[#bOverrideObject ✅]]
-* **Pick Object from Array On/Off** - переключение параметра [[#bPickObjectFromArray ✅]]
+* **Object Pick Override On/Off** - переключение параметра [[#OverrideObject ✅]]
+* **Pick Object from Array On/Off** - переключение параметра [[#PickObjectFromArray ✅]]
 
-Работают согласно диапазону индексов **Object Edits indices Range**. Когда хотя бы один из индексов равен **-1**, работают со всеми копиями.
+Работают согласно диапазону индексов **Object Edits Indices Range**. Когда хотя бы один из индексов равен **-1**, работают со всеми копиями.
 
 #### Индивидуальные параметры копий
 
 **Copies Data Array**
 
-##### bOverrideObject ✅
+##### OverrideObject ✅
 
 Переключает переопределение выбора инстанцируемого объекта (меша или блюпринта) для копии.
 
