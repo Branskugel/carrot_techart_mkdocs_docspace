@@ -117,7 +117,7 @@
 
 
 
-#TODO дописать
+#TBD дописать
 
 
 ### Параметры сгенерированных копий {: id="generated-instances-params"}
@@ -144,17 +144,17 @@
 
 
 
-#TODO дописать
+#TBD дописать
 
 ### О работе с материалами {: id="working-with-materials"}
 
-#TODO дописать
+#TBD дописать
 
 
 
 ### Отладка {: id="debugging"}
 
-#TODO дописать
+#TBD дописать
 
 
 

@@ -1,3 +1,3 @@
 # MMF_YegorFX
  
-#RYM_Utilities #TODO дописать
+#RYM_Utilities #TBD дописать
