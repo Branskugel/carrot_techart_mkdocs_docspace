@@ -8,7 +8,8 @@
 
 
 #### v1.26.9
-Актуальная последняя версия
+
+<mark style="color:hsl(0, 0%, 100%);background-color:hsl(218, 60%, 55%);border-radius: 6px;padding: 3px;">Актуальная последняя версия</mark>
 
 `16.10.2024`
 
