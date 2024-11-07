@@ -38,38 +38,44 @@
 
 ### RHI
 `stat rhi`
+
 Отображает память RHI и статистику производительности.
 
 ![[WidgetPanel_CC_RHI.png]]{style="border-radius: 5px"}
 
 > [!info]- Что такое RHI
-> **Render Hardware Interface** (RHI) — это уровень абстракции над несколькими платформенно-специфичными графическими API. Например gpu.
+> **Render Hardware Interface** (RHI) — это уровень абстракции над несколькими платформенно-специфичными графическими API.
 
 ### GPU
 `stat gpu`
+
 Отображает статистику графического процессора (GPU) для кадра.
 
 ![[WidgetPanel_CC_GPU.png]]{style="border-radius: 5px"}
 
 ### ANIM
 `stat anim`
+
 Отображает статистику для системы анимации.
 
 ![[ConsoleCommands_ANIM.png]]{style="border-radius: 5px"}
 
 ### SCENE RENDERING
 `stat scenerendering`
+
 Показывает общую статистику рендеринга. Это хорошая отправная точка для поиска областей с низкой производительностью в процессе рендеринга.
 
 ![[ConsoleCommands_SceneRendering.png]]{style="border-radius: 5px"}
 
 ### MEMORY
 `stat memory`
+
 Отображает информацию о памяти, используемой различными системами.
 
 ![[WidgetPanel_CC_MEMORY.png]]{style="border-radius: 5px"}
 ### PROFILE PER MATERIAL
 `r.RHISetGPUCaptureOptions 1` , `profile gpu`
+
 Переключает параметр профайлера на отображение времени рендеринга материалов в милисекундах и открывает его.
 
 ![[WidgetPanel_CC_ProfilePerMaterial.png]]{style="border-radius: 5px"}
