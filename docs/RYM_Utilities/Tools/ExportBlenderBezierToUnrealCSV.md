@@ -1,4 +1,4 @@
-# Экспортер кривых Bezier из Blender в Unreal
+# Экспортер кривых Bezier в CSV (Blender addon)
 
 Аддон для #Blender Работоспособность проверялась на версии 4.3. 
 
