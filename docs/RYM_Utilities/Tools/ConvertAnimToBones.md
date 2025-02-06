@@ -7,8 +7,7 @@
 Предназначен для запекания объектной анимации, в том числе rigid body симуляций, на скелетную. В процессе объекты будут автоматически привязаны к новым скелетам.
 
 
-![[BlenderAddon_ConvertAnimToBones.png]]
-{style="border-radius: 5px"}
+![[BlenderAddon_ConvertAnimToBones.png]]{style="border-radius: 5px"}
 
 ##### Join Objects
 Объединит сетки объектов в один объект

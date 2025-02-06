@@ -13,8 +13,8 @@
 
 Сам же аддон добавляет в меню экспорта блендера пункты
 
-![[ExportBlenderBezierToUnrealCSV.png]]
-{style="border-radius: 5px"} `поддерживается не только UE4, но и UE5`
+![[ExportBlenderBezierToUnrealCSV.png]]{style="border-radius: 5px"} 
+`поддерживается не только UE4, но и UE5`
 
 Поддерживает:
 

@@ -1,10 +1,8 @@
-![[ScriptedActions.png]]
-{style="border-radius: 5px"}
+![[ScriptedActions.png]]{style="border-radius: 5px"}
 
 ### Batch Rename Assets
 
-![[Scripted_Actions_Batch_Rename.png]]
-{style="border-radius: 5px"}
+![[Scripted_Actions_Batch_Rename.png]]{style="border-radius: 5px"}
 
 Выбор этого пункта откроет окно настроек для задания параметров того, как вы бы хотели переименовать выделенные ассеты.
 
@@ -36,8 +34,7 @@
 
 Выбор этого пункта приведёт к открытию следующего окошка, где можно будет отметить ЛОДы ассетов какого типа вы хотите удалить.
 
-![[Scripted_Actions_Disable_LODS_prompt.png]]
-{style="border-radius: 5px"}
+![[Scripted_Actions_Disable_LODS_prompt.png]]{style="border-radius: 5px"}
 
 Галочка Remove Static Mesh LODs так же включит в выборку выделенные Foliage ассеты, так как они основаны на статик мешах.
 
@@ -45,15 +42,13 @@
 ### Set Material Instance Parent
 
 
-![[Scripted_Actions_Set_MI_Parent.png]]
-{style="border-radius: 5px"}
+![[Scripted_Actions_Set_MI_Parent.png]]{style="border-radius: 5px"}
 
 Откроет окно для установки нового родительского материала всем выделенным ассетам Material Instance. <span style="color: red;">Сразу сохраняет изменение.</span>
 
 ### Toggle sRGB
 
 
-![[ScriptedActions_Toggle_sRGB.png]]
-{style="border-radius: 5px"}
+![[ScriptedActions_Toggle_sRGB.png]]{style="border-radius: 5px"}
 
-Откроет окно для установки свойства sRGB всем выделенным ассетам текстур. <span style="color: red;">Сразу сохраняет изменение.</span> Но отобразится изменение в описании ассета, только если заново их выделить в контент браузере.
+Откроет окно для установки свойства sRGB всем выделенным ассетам текстур. <span style="color: red;">Сразу сохраняет изменение.</span> Но отобразится изменение в описании ассетов, только если заново их выделить в контент браузере.
