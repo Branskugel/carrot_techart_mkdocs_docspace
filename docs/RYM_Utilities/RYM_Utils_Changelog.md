@@ -7,9 +7,15 @@
 ---
 
 
-#### v1.27.6
+#### v1.27.7
 
 <mark style="color:hsl(0, 0%, 100%);background-color:hsl(218, 60%, 55%);border-radius: 6px;padding: 3px;">Актуальная последняя версия</mark>
+
+11.02.2025`
+
+- Мелкие исправления в новые инструменты для [[ImportBlenderBezierToUnreal|импорта сплайнов]]
+#### v1.27.6
+
 
 `06.02.2025`
 
