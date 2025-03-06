@@ -7,6 +7,16 @@
 ---
 
 
+#### v1.27.8
+
+<mark style="color:hsl(0, 0%, 100%);background-color:hsl(218, 60%, 55%);border-radius: 6px;padding: 3px;">Актуальная последняя версия</mark>
+
+`06.03.2025`
+
+- В Asset Scripted Actions обавлена функция `Flip Normals` для Static Mesh ассетов выделенных в контент браузере
+- Небольшие исправления в работе BP_SolidSplineCloner
+
+
 #### v1.27.7
 
 <mark style="color:hsl(0, 0%, 100%);background-color:hsl(218, 60%, 55%);border-radius: 6px;padding: 3px;">Актуальная последняя версия</mark>
