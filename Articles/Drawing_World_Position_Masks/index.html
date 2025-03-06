@@ -1,0 +1,1905 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="RYM">
+      
+      
+      
+        <link rel="prev" href="../CreateEmptyHierarchy/">
+      
+      
+        <link rel="next" href="../HowTo_FindSplineTools/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Рисование масок в мировых координатах - Carrot tech art docspace</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../_assets/css/obsidian_tags.css">
+    
+      <link rel="stylesheet" href="../../_assets/css/obsidian_headers.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Carrot tech art docspace" class="md-header__button md-logo" aria-label="Carrot tech art docspace" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Carrot tech art docspace
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Рисование масок в мировых координатах
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Carrot tech art docspace" class="md-nav__button md-logo" aria-label="Carrot tech art docspace" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Carrot tech art docspace
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Главная
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Articles
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Articles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A_bit_on_materials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Немного о материалах
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CreateEmptyHierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Организация сцены иерархией пустышек
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Рисование масок в мировых координатах
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Рисование масок в мировых координатах
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Применение
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      Инструкция
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Инструкция">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Подготовка ассетов
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Подготовка ассетов">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canvas-render-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      Canvas Render Target
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rvt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Virtual Texture или RVT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brush-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      Материал кисти
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canvas-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      Материал холста
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      MPC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scene-entities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Работа со сценой
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Работа со сценой">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mesh-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Третий холст
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rvt-volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      Напарник холста
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Напарник холста">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rvt-volume-hide-primitives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Скрытие холста
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-blueprint-brush" class="md-nav__link">
+    <span class="md-ellipsis">
+      Добавляем блюпринт-кисть
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bpc-maskpainter-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Работа с блюпринтом
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Работа с блюпринтом">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bpc-maskpainter-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Параметры
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Параметры">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brush-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brush Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canvas-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Canvas Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bpc-maskpainter-init" class="md-nav__link">
+    <span class="md-ellipsis">
+      Инициализация
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bpc-maskpainter-drawing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Рисование
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rvt-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Считывание маски
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HowTo_FindSplineTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Как быстро найти Spline инструменты в плагине
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ImportBlenderBezierToUnreal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ипорт кривых Bezier из Blender в Unreal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Shader_Spline_Animation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Шейдерная анимация по сплайну
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TP_KRD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Шаблон проекта TP_KRD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    BlenderAddOns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            BlenderAddOns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BlenderAddOns/SimpleRenamingPanel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SimpleRenamingPanel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    RYM Utilities
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            RYM Utilities
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/RYM_Utils_Changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    История изменений
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/Tools/BP_DeformSplineCloner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BP_DeformSplineCloner
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/Tools/BP_LightSnapshotr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BP_LightSnapshotr
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/Tools/BP_RandomInstanceShaderGrid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BP_RandomInstanceShaderGrid
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/Tools/BP_SolidSplineCloner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BP_SolidSplineCloner
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/Tools/BP_SplineActor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BP_SplineActor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/Tools/ConvertAnimToBones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Костяная нога (Blender addon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/Tools/ExportBlenderBezierToUnrealCSV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Экспортер кривых Bezier в CSV (Blender addon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/Tools/MC_FollowSpline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MC_FollowSpline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/Tools/MC_NoiseTransform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MC_NoiseTransform
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/Tools/MC_Pong/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MC_Pong
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/Tools/MMF_YegorFX/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MMF_YegorFX
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/Tools/Scripted_Actions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scripted Actions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/Tools/SplineBaker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SplineBaker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/Tools/SplinePath/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SplinePath
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    WPanel
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            WPanel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/WPanel/BlueprintUnpacker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Распаковка блюпринтов
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/WPanel/ConsoleCommands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Консольные команды
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/WPanel/FixBounds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Исправление пропадашек
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/WPanel/FolderStructure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Создание структуры папок
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/WPanel/Helpers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Вспомогашки
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/WPanel/InstanceUnbaker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Распекание инстансов
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/WPanel/Selectorr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Выделятор
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utilities/WPanel/TagBox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Тэгбокс
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Применение
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      Инструкция
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Инструкция">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Подготовка ассетов
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Подготовка ассетов">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canvas-render-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      Canvas Render Target
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rvt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Virtual Texture или RVT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brush-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      Материал кисти
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canvas-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      Материал холста
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      MPC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scene-entities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Работа со сценой
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Работа со сценой">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mesh-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Третий холст
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rvt-volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      Напарник холста
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Напарник холста">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rvt-volume-hide-primitives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Скрытие холста
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-blueprint-brush" class="md-nav__link">
+    <span class="md-ellipsis">
+      Добавляем блюпринт-кисть
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bpc-maskpainter-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Работа с блюпринтом
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Работа с блюпринтом">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bpc-maskpainter-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Параметры
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Параметры">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brush-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brush Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canvas-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Canvas Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bpc-maskpainter-init" class="md-nav__link">
+    <span class="md-ellipsis">
+      Инициализация
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bpc-maskpainter-drawing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Рисование
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rvt-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Считывание маски
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">Рисование масок в мировых координатах<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Внимание</p>
+<p>Использование этого подхода потребует использования плагина <strong class="hash">RYM_Utilities</strong> версии 1.26.9 или новее, а так же включения в настройках проекта настроек:</p>
+<ul>
+<li><strong>Support UV From Hit Results</strong></li>
+<li><strong>Enable Virtual Texture Support</strong></li>
+</ul>
+</div>
+<h2 id="purpose">Применение<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
+<p>Позволяет рисовать в пространстве мировых координат маску вслед за движением объекта. Такую маску можно тут же считывать в любом материале для получения эффектов сохраняющих своё состояние в пространстве. Например, следы от проехавшего автомобиля или приминаемая трава, которая остаётся лежать, когда автомобиль уже проехал.</p>
+<h2 id="how-to">Инструкция<a class="headerlink" href="#how-to" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Внимание </p>
+<p>Сразу хочу предупредить. На первый взгляд процесс может показаться запутанным и непонятным. Лучше читать не торопясь и повторять вдумчиво. Но, собрав один раз, вы уже будете иметь у себя на вооружении очень полезную вещь.</p>
+</div>
+<h3 id="assets">Подготовка ассетов<a class="headerlink" href="#assets" title="Permanent link">&para;</a></h3>
+<p>Для начала нам понадобится целый ряд ассетов, которые нужно создать и правильно настроить:</p>
+<ul>
+<li><a href="./#canvas-render-target">Canvas Render Target</a> Texture - это наш холст</li>
+<li><a href="./#rvt">Runtime Virtual Texture</a> - это его отражение в мировых координатах</li>
+<li><a href="./#brush-properties">Материал "кисти"</a> для рисования по холсту</li>
+<li><a href="./#mpc">Material Parameter Collection</a> - универсальный пересылатель данных от блюпринта рисователя к кисти и, таким образом, к текстуре. <strong>Опционален</strong></li>
+<li><a href="./#canvas-material">Материал холста</a>. <strong>Опционален</strong>.</li>
+</ul>
+<p><img alt="WP_Masks_Assets_1.png" src="../attachments/WP_Masks_Assets_1.png" style="border-radius: 5px" /></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&#39;RYM_Utilities/Materials/Misc/RTT_to_RVT_Masking/&#39; | &#39;BPC_MaskPainter&#39;
+</span></code></pre></div>
+<p><span class="arithmatex">\(\quad\)</span>Если вставить этот текст в строку поиска в панели Content Browser, находясь в папке All, то отобразятся все ассеты имеющие отношение к теме. Так что, по большому счёту, всё, что я здесь упоминаю можно самостоятельно не создавать, а просто скопировать из плагина. </p>
+<p><img alt="WP_Masks_Assets_2.png" src="../attachments/WP_Masks_Assets_2.png" style="border-radius: 5px" /></p>
+<p>Но в таком случае нужно обязательно переименовать свои копии этих ассетов, чтобы не было задваивания с плагином, которое может в дальнейшем сыграть злую шутку. Поэтому далее я буду описывать работу так, словно у нас изначально ничего нет. Ну кроме блюпринта.</p>
+<h4 id="canvas-render-target">Canvas Render Target<a class="headerlink" href="#canvas-render-target" title="Permanent link">&para;</a></h4>
+<p>Это наш будущий холст. На самом деле "холстов" у нас здесь целых три в каком-то смысле, а кистей две, но обо всём по порядку.</p>
+<p><span class="arithmatex">\(\quad\)</span>Этот ассет мы создаём в разрешении не больше чем 2048 на 2048, так как большое разрешение нам здесь вряд ли будет когда либо полезно или нужно. Меньше - лучше.</p>
+<h4 id="rvt">Runtime Virtual Texture или RVT<a class="headerlink" href="#rvt" title="Permanent link">&para;</a></h4>
+<p>Это наш второй холст. Он необходим для того, чтобы записанную в Canvas Render Target текстуру информацию можно было легко считать в том месте в мировых координатах, где она была записана. Эдакий конвертер в данном случае.</p>
+<h4 id="brush-material">Материал кисти<a class="headerlink" href="#brush-material" title="Permanent link">&para;</a></h4>
+<p>Он должен быть <em>транслюсентным</em> и изображать некую маску в [0-1] UV координатах, хотя бы на канале opacity, когда как в Emissive можно подавать уже любую информацию. Если никаких наворотов не нужно, то можно просто заткнуть Emissive белым цветом.</p>
+<p><img alt="WP_Masks_SimpleBrushMaterial.png" src="../attachments/WP_Masks_SimpleBrushMaterial.png" style="border-radius: 5px" /></p>
+<p>В плагине же поставляется кисть немного посложнее. Она поддерживает запись направления движения объекта и маска у неё настроена определённым образом.</p>
+<h4 id="canvas-material">Материал холста<a class="headerlink" href="#canvas-material" title="Permanent link">&para;</a></h4>
+<p>На самом деле материал холста несколько опционален. В том смысле, что его не обязательно создавать как что-то отдельное и его функционал может быть встроен в существующий, если ваша сцена вам позволяет.</p>
+<p><img alt="WP_Masks_CanvasMaterial.png" src="../attachments/WP_Masks_CanvasMaterial.png" style="border-radius: 5px" /></p>
+<p>На скриншоте представлен материал поставляемый с плагином - <strong>M_RTT_RVT_Converter</strong>. Его Blend Mode задан как <em>masked</em>, а в канал opacity подаётся значение 0, чтобы не отображаться в сцене, но всё ещё не считаться скрытым как при активированном свойстве Hidden in game<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</p>
+<p><span class="arithmatex">\(\quad\)</span>Особенность материала холста заключается в передаче данных Canvas Render Target текстуры в RVT посредством ноды Runtime Virtual Texture Output. На скриншоте между ними кастомная нода MF_UnmultiplyAlpha. Она используется для инверсии эффекта альфы на цветовой канал, чтобы он приходил из текстуры так, как задумано. </p>
+<h4 id="mpc">MPC<a class="headerlink" href="#mpc" title="Permanent link">&para;</a></h4>
+<p>Material Parameter Collection ассет, через который будут передаваться обновляемые данные. Предназначен для более продвинутого использования. Например, для передачи направления движения объекта.</p>
+<h3 id="scene-entities">Работа со сценой<a class="headerlink" href="#scene-entities" title="Permanent link">&para;</a></h3>
+<h4 id="mesh-canvas">Третий холст<a class="headerlink" href="#mesh-canvas" title="Permanent link">&para;</a></h4>
+<p>Собственно меш, находящийся в сцене и, в пределах которого мы хотим рисовать маску. В идеале это просто плоскость. Меш-холст должен всегда отображаться в сцене, но может быт полностью прозрачным opacity mask.</p>
+<p><span class="arithmatex">\(\quad\)</span><strong>Коллизии</strong> этого меша должны быть настроены соответствующим образом, чтобы он реагировал на <a href="./#blueprint-brush">кисть-блюпринт</a> и ни на что более.</p>
+<p><img alt="WP_Masks_MeshCanvasCollisionSettings.png" src="../attachments/WP_Masks_MeshCanvasCollisionSettings.png" style="border-radius: 5px" /></p>
+<p>Так же, в категории <strong>Virtual Texture</strong> нужно указать RVT холст, на который будет наноситься изображение.</p>
+<p><img alt="WP_Masks_CanvasMesh_RVT_slot.png" src="../attachments/WP_Masks_CanvasMesh_RVT_slot.png" style="border-radius: 5px" /></p>
+<h4 id="rvt-volume">Напарник холста<a class="headerlink" href="#rvt-volume" title="Permanent link">&para;</a></h4>
+<p>Так же, на каждый такой холст, нам в сцене понадобится специальная сущность под названием Runtime Virtual Texture <strong>Volume</strong>. Им нужно обрамить объект меш-холста целиком.</p>
+<p><img alt="WP_Masks_RVT-Volume_Bounds.png" src="../attachments/WP_Masks_RVT-Volume_Bounds.png" style="border-radius: 5px" /></p>
+<p><span class="arithmatex">\(\quad\)</span>Для этого у него есть настройка <strong>Bounds Align Actor</strong>, ей назначаем наш меш-холст и жмём ниже кнопку <strong>Set Bounds</strong>. Если не сработало или криво, то можно просто протрансформировать наш Volume по location, rotation и scale. Главное чтобы меш-холст был целиком внутри него.</p>
+<p><span class="arithmatex">\(\quad\)</span>Завершает настройку RVT Volume подача ему ассета RVT текстуры, в которую будет вестись запись информация внутри этого объекта.</p>
+<p><img alt="WP_Masks_RVT-Volume_RVT-Asset.png" src="../attachments/WP_Masks_RVT-Volume_RVT-Asset.png" style="border-radius: 5px" /></p>
+<h5 id="rvt-volume-hide-primitives">Скрытие холста<a class="headerlink" href="#rvt-volume-hide-primitives" title="Permanent link">&para;</a></h5>
+<p>Так же RVT Volume предлагает альтернативный нулевой прозрачности на материале холста способ скрытия последнего. Свойство <strong>Hide Primitives</strong> подраздела Advanced раздела Transform from Bounds.</p>
+<p><img alt="WP_Masks_RVT-Volume_HidePrimitives.png" src="../attachments/WP_Masks_RVT-Volume_HidePrimitives.png" style="border-radius: 5px" /></p>
+<p>Но для использования этой опции свойство Draw in Main Pass раздела Virtual Texture нашего меш-холста должно быть назначено на <strong>From Virtual Texture</strong>. </p>
+<p><img alt="WP_Masks_MeshCanvas_DrawInMainPass.png" src="../attachments/WP_Masks_MeshCanvas_DrawInMainPass.png" style="border-radius: 5px" /></p>
+<p>Оно запрещает объекту рендериться<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>, если в сцену помещён RVT Volume с соответствующей RVT текстурой и активным свойством Hide Primitives. <strong>Never</strong> означает, что объект не будет рендериться ни при каких условиях и не зависит от свойства Hide Primitives. Когда как свойство <strong>Always</strong> наоборот - заставляет объект рендериться вне зависимости от выше обозначенных условий. Холст с настройкой Always может так же и сам считывать RVT текстуру.</p>
+<h4 id="add-blueprint-brush">Добавляем блюпринт-кисть<a class="headerlink" href="#add-blueprint-brush" title="Permanent link">&para;</a></h4>
+<p><strong>BPC_MaskPainter</strong> - это блюпринт-инструмент, представляющий собой особый scene компонент. В точке своего прикрепления к объекту он осуществляет line trace проверку на наличие под или над ним объекта-холста. Если он его находит, то в этой точке рисует на Canvas Render Target текстуре нашим материалом-кистью. В него заранее имплементирована возможность работы с MPC для записи кастомных данных или вектора направления движения.</p>
+<p>Добавляется простым перетаскиванием в иерархию компонентов объекта.</p>
+<p><img alt="WP_Masks_BPC_MaskPainter_ExampleHierarchy.png" src="../attachments/WP_Masks_BPC_MaskPainter_ExampleHierarchy.png" style="border-radius: 5px" /></p>
+<p><code>Пример расположения в иерархии другого актора. Компонент добавлен экземпляру блюпринта на уровне - "снаружи"</code></p>
+<h3 id="bpc-maskpainter-setup">Работа с блюпринтом<a class="headerlink" href="#bpc-maskpainter-setup" title="Permanent link">&para;</a></h3>
+<p>Все параметры этого компонента можно настроить как на экземпляре внутри родительского блюпринта, так и на добавленном "снаружи" - на уровне</p>
+<h4 id="bpc-maskpainter-parameters">Параметры<a class="headerlink" href="#bpc-maskpainter-parameters" title="Permanent link">&para;</a></h4>
+<h5 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h5>
+<p><img alt="WP_Masks_BPC_MaskPainter_SetupParams.png" src="../attachments/WP_Masks_BPC_MaskPainter_SetupParams.png" style="border-radius: 5px" /></p>
+<ul>
+<li><strong>Actor Layer</strong> - название слоя, акторы которого будут отфильтрованы из проверки инструмента, чтобы его "выстрелы" проходили только по Canvas Object<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+<li><strong>Clear Color</strong> - цвет, на который сбрасывается Canvas Render Target</li>
+<li><strong>Clear Before Drawing</strong> ✅ - активация сброса Canvas Render Target текстуры до Clear Color цвета перед началом рисования</li>
+</ul>
+<h5 id="brush-properties">Brush Properties<a class="headerlink" href="#brush-properties" title="Permanent link">&para;</a></h5>
+<p><img alt="WP_Masks_BPC_MaskPainter_BrushProperties.png" src="../attachments/WP_Masks_BPC_MaskPainter_BrushProperties.png" style="border-radius: 5px" /></p>
+<ul>
+<li><strong>Material Brush</strong> - Материал кисти, используемый для рисования на Canvas Render Target текстуре</li>
+<li><strong>Brush Size</strong> - Размер кисти</li>
+<li><strong>Use Brush Rotation</strong> ✅ - активация использования поворота кисти</li>
+<li><strong>Brush Rotation</strong> - поворот кисти</li>
+<li><strong>Update Brush Rotation</strong> ✅ - активация обновления поворота кисти во время рисования</li>
+<li><strong>Brush Rotation From Local Direction</strong> ✅ - переключение способа вычисления вращения кисти от движения на вектор направления относительный родительского актора</li>
+<li><strong>Trace Location Z Range</strong> - Длина луча ищущего холст от центра самого компонента BPC_MaskPainter</li>
+<li><strong>Send Data to MPC</strong> - переключает поведение отправки данных в MPC. Подробнее в подсказке при наведении мышью</li>
+<li><strong>MPC</strong> - Material Parameter Collection ассет, используемый для передачи данных</li>
+<li><strong>MPC Parameter Name</strong> - название параметра MPC, который будет перезаписываться</li>
+<li><strong>Invert Direction Vector</strong> ✅ - инверсия вектора направления</li>
+</ul>
+<h5 id="canvas-properties">Canvas Properties<a class="headerlink" href="#canvas-properties" title="Permanent link">&para;</a></h5>
+<p><img alt="WP_Masks_BPC_MaskPainter_CanvasProperties.png" src="../attachments/WP_Masks_BPC_MaskPainter_CanvasProperties.png" style="border-radius: 5px" /></p>
+<ul>
+<li><strong>Canvas Object</strong> - объект служащий холстом в сцене</li>
+<li><strong>Canvas Render Target</strong> - соответствующая RTT текстура</li>
+<li><strong>Canvas Object UV Channel</strong> - UV канал холста, используемый для рисования на Canvas Render Target текстуре.</li>
+</ul>
+<h5 id="animation">Animation<a class="headerlink" href="#animation" title="Permanent link">&para;</a></h5>
+<p><img alt="WP_Masks_BPC_MaskPainter_AnimationParams.png" src="../attachments/WP_Masks_BPC_MaskPainter_AnimationParams.png" style="border-radius: 5px" /></p>
+<ul>
+<li><strong>Strokes Frequency</strong> - частота нанесения мазков на текстуру в секунду. Больше - плавнее, но дороже, так что не всегда лучше.</li>
+<li><strong>Spline Actor</strong> - Актор со spline компонентом, по которому может двигаться сам BPC_MaskPainter или его родитель.</li>
+<li><strong>AnimTime</strong> - Время рисования в секундах.</li>
+<li><strong>Autoplay?</strong> ✅ - Активация автоматического старта рисования с началом игры</li>
+</ul>
+<h4 id="bpc-maskpainter-init">Инициализация<a class="headerlink" href="#bpc-maskpainter-init" title="Permanent link">&para;</a></h4>
+<p>Произвести инициализацию блюпринта, то есть последнюю подготовку его к использованию, можно в управляющем (или родительском) блюпринте, с помощью функции Init. Любой её параметр можно оставить пустым и тогда, он не будет заменять собой уже настроенный. Эта функция позволяет произвести донастройку компонента и перевести его в "боевой" режим, если всё настроено правильно.</p>
+<p><img alt="WP_Masks_BPC_MaskPainter_Init_function.png" src="../attachments/WP_Masks_BPC_MaskPainter_Init_function.png" style="border-radius: 5px" /></p>
+<h4 id="bpc-maskpainter-drawing">Рисование<a class="headerlink" href="#bpc-maskpainter-drawing" title="Permanent link">&para;</a></h4>
+<p>После настройки параметров компонента можно перейти к активации в анимации. Для этого достаточно вызвать функцию Play From Start (или Play) из управляющего (или родительского) блюпринта.</p>
+<p><img alt="WP_Masks_BPC_MaskPainter_AnimStart.png" src="../attachments/WP_Masks_BPC_MaskPainter_AnimStart.png" style="border-radius: 5px" /></p>
+<p><code>На этом скриншоте так же задаётся время анимации для компонента то же, что и у родительского блюпринта для синхронизации с движением объекта, к которому прикреплён компонент</code></p>
+<p>По окончании анимации управляющего (или родительского) блюпринтам, можно так же принудительно завершить рисование вызовом функции <strong>Stop</strong> у компонента.</p>
+<h3 id="rvt-sampling">Считывание маски<a class="headerlink" href="#rvt-sampling" title="Permanent link">&para;</a></h3>
+<p><img alt="WP_Masks_RVT_Sample.png" src="../attachments/WP_Masks_RVT_Sample.png" style="border-radius: 5px" /></p>
+<p>Считывание изображения в материале, который рассчитывает использовать результат рисования, происходит посредством ноды <strong>Runtime Virtual Texture Sample</strong>. Настройки должны быть указаны соответственно тому, как настроен сам ассет RVT текстуры.</p>
+<p>Используя в связке с функцией <strong>MF_RVT_MaskedBend</strong> (поставляется с плагином), можно, например, добиться эффекта приминаемой от движения объекта травы, которая сохранит своё примятое состояние, когда объект проедет мимо.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Удалять его из слоя не нужно, он сам себя вычитает из выборки.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Скрыть меш-холст можно и другим способом: с этим поможет свойство <a href="./#rvt-volume-hide-primitives">hide primitives</a> у Runtime Virtual Texture Volume объекта&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Подразумевается рендеринг в Main Pass. Это основной этап рендеринга в Unreal Engine, он включает два основных метода: <strong>отложенный рендеринг</strong> (deferred) и <strong>прямой (forward) рендеринг</strong>. Отложенный рендеринг используется в движке по умолчанию. Он разделяет геометрию сцены и расчеты освещения, что позволяет эффективно обрабатывать сложные сцены с множеством источников света. Прямой рендеринг выполняет все расчеты в один проход, что подходит для проектов с простыми освещением и высокой производительностью. Подробнее о рендер-пассах Unreal Engine можно почитать <a href="https://unrealartoptimization.github.io/book/profiling/passes/">здесь</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../_assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      
+        <script src="../../_assets/javascripts/obsidian_tags.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,14 @@
+.hash {
+    background-color: #a58bd8;
+    border-radius: 20px;
+    padding: 5px;
+    font-weight: normal;
+  }
+  
+  [data-md-color-scheme=default] .hash {
+    background-color: #ebe8f0;
+  }
+
+  [data-md-color-scheme=slate] .hash {
+    background-color: #372d4d;
+  }

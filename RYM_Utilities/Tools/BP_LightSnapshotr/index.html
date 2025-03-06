@@ -1,0 +1,2160 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="RYM">
+      
+      
+      
+        <link rel="prev" href="../BP_DeformSplineCloner/">
+      
+      
+        <link rel="next" href="../BP_RandomInstanceShaderGrid/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>BP_LightSnapshotr - Carrot tech art docspace</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../_assets/css/obsidian_tags.css">
+    
+      <link rel="stylesheet" href="../../../_assets/css/obsidian_headers.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bp_lightsnapshotr" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Carrot tech art docspace" class="md-header__button md-logo" aria-label="Carrot tech art docspace" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Carrot tech art docspace
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              BP_LightSnapshotr
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Carrot tech art docspace" class="md-nav__button md-logo" aria-label="Carrot tech art docspace" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Carrot tech art docspace
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Главная
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Articles
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Articles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Articles/A_bit_on_materials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Немного о материалах
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Articles/CreateEmptyHierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Организация сцены иерархией пустышек
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Articles/Drawing_World_Position_Masks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Рисование масок в мировых координатах
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Articles/HowTo_FindSplineTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Как быстро найти Spline инструменты в плагине
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Articles/ImportBlenderBezierToUnreal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ипорт кривых Bezier из Blender в Unreal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Articles/Shader_Spline_Animation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Шейдерная анимация по сплайну
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Articles/TP_KRD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Шаблон проекта TP_KRD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    BlenderAddOns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            BlenderAddOns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Articles/BlenderAddOns/SimpleRenamingPanel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SimpleRenamingPanel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    RYM Utilities
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            RYM Utilities
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utils_Changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    История изменений
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BP_DeformSplineCloner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BP_DeformSplineCloner
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    BP_LightSnapshotr
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    BP_LightSnapshotr
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Общие параметры
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Общие параметры">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialize" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-selected-actors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Selected Actors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-selected-actors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remove Selected Actors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refresh-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refresh Lists
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear-actors-and-components-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clear Actors and Components Lists
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Full Reset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actors-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actors Selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#light-properties-initial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Light Properties initial
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Снэпшоты параметров
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Снэпшоты параметров">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#light-properties-snapshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      Light Properties Snapshots
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Light Properties Snapshots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#colorshift" class="md-nav__link">
+    <span class="md-ellipsis">
+      ColorShift
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Прочие общие параметры
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Индивидуальные параметры источников снэпшота
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Индивидуальные параметры источников снэпшота">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intensity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intensity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#override-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Override Size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-specific" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class Specific
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Прочие индивидуальные параметры
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Условия выделения группы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Условия выделения группы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bypass-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bypass Filtering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exclude-skylights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exclude Skylights
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-by-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Select by Layer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Select by Layer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layer-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layer Name
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-by-actor-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Select by Actor Tag
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Select by Actor Tag">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tag
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-by-actor-prefix-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Select by Actor Prefix Name
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Select by Actor Prefix Name">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name-prefix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Name Prefix
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Анимация
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Анимация">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#play-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Play, Stop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-cheap-transition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cheap Transition ✅
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anim-curve" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anim Curve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snapshot-to-transition-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snapshot to Transition To
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transition-anim-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transition Anim Time
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-tween-snapshot-for-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Tween Snapshot for Animation ✅
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tween-snapshot-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tween Snapshot Selection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BP_RandomInstanceShaderGrid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BP_RandomInstanceShaderGrid
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BP_SolidSplineCloner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BP_SolidSplineCloner
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BP_SplineActor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BP_SplineActor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ConvertAnimToBones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Костяная нога (Blender addon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ExportBlenderBezierToUnrealCSV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Экспортер кривых Bezier в CSV (Blender addon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MC_FollowSpline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MC_FollowSpline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MC_NoiseTransform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MC_NoiseTransform
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MC_Pong/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MC_Pong
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MMF_YegorFX/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MMF_YegorFX
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Scripted_Actions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scripted Actions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SplineBaker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SplineBaker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SplinePath/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SplinePath
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    WPanel
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            WPanel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WPanel/BlueprintUnpacker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Распаковка блюпринтов
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WPanel/ConsoleCommands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Консольные команды
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WPanel/FixBounds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Исправление пропадашек
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WPanel/FolderStructure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Создание структуры папок
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WPanel/Helpers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Вспомогашки
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WPanel/InstanceUnbaker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Распекание инстансов
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WPanel/Selectorr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Выделятор
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WPanel/TagBox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Тэгбокс
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Общие параметры
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Общие параметры">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialize" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-selected-actors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Selected Actors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-selected-actors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remove Selected Actors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refresh-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refresh Lists
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear-actors-and-components-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clear Actors and Components Lists
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Full Reset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actors-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actors Selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#light-properties-initial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Light Properties initial
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Снэпшоты параметров
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Снэпшоты параметров">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#light-properties-snapshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      Light Properties Snapshots
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Light Properties Snapshots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#colorshift" class="md-nav__link">
+    <span class="md-ellipsis">
+      ColorShift
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Прочие общие параметры
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Индивидуальные параметры источников снэпшота
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Индивидуальные параметры источников снэпшота">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intensity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intensity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#override-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Override Size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-specific" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class Specific
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Прочие индивидуальные параметры
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Условия выделения группы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Условия выделения группы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bypass-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bypass Filtering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exclude-skylights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exclude Skylights
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-by-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Select by Layer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Select by Layer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layer-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layer Name
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-by-actor-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Select by Actor Tag
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Select by Actor Tag">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tag
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-by-actor-prefix-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Select by Actor Prefix Name
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Select by Actor Prefix Name">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name-prefix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Name Prefix
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Анимация
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Анимация">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#play-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Play, Stop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-cheap-transition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cheap Transition ✅
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anim-curve" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anim Curve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snapshot-to-transition-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snapshot to Transition To
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transition-anim-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transition Anim Time
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-tween-snapshot-for-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Tween Snapshot for Animation ✅
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tween-snapshot-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tween Snapshot Selection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="bp_lightsnapshotr">BP_LightSnapshotr<a class="headerlink" href="#bp_lightsnapshotr" title="Permanent link">&para;</a></h1>
+<p><strong class="hash">RYM_Utilities</strong></p>
+<p>Самостоятельный блюпринт управления и анимации переходов 
+между пресетами (далее "<em>снэпшот</em>") световых схем.</p>
+<h3 id="_1">Общие параметры<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p><img alt="BP_LightSnapshotr_CommonParams.png" src="../attachments/BP_LightSnapshotr_CommonParams.png" style="border-radius: 5px" /></p>
+<h5 id="initialize">Initialize<a class="headerlink" href="#initialize" title="Permanent link">&para;</a></h5>
+<p>Заполняет списки акторов и их компонентов, с которыми работает инструмент, а также собирает их параметры в два списка:</p>
+<ol>
+<li><a href="./#light-properties-initial">Light Properties Initial</a> - снэпшот параметров, с которыми источники были добавлены при инициализации.</li>
+<li><a href="./#light-properties-snapshots">NewSnapshot</a> - первый, и пока единственный, пользовательский снэпшот с названием по умолчанию. Изначально будет полностью совпадать с Light Properties Initial, но связи между ними нет.</li>
+</ol>
+<h5 id="add-selected-actors">Add Selected Actors<a class="headerlink" href="#add-selected-actors" title="Permanent link">&para;</a></h5>
+<p>Добавит компоненты акторов, добавленных в <span style=""></span>список <a href="./#actors-selection">Actors Selection</a></p>
+<h5 id="remove-selected-actors">Remove Selected Actors<a class="headerlink" href="#remove-selected-actors" title="Permanent link">&para;</a></h5>
+<p>Удалит из списков компоненты акторов, добавленных в список Actors Selection.</p>
+<h5 id="refresh-lists">Refresh Lists<a class="headerlink" href="#refresh-lists" title="Permanent link">&para;</a></h5>
+<p>Обновит списки компонентов, устраняя те, которых более не существует на сцене. Лучше не пренебрегать, если удаляли источники не пользуясь кнопкой <strong>Remove Selected Actors</strong>.</p>
+<h5 id="clear-actors-and-components-lists">Clear Actors and Components Lists<a class="headerlink" href="#clear-actors-and-components-lists" title="Permanent link">&para;</a></h5>
+<p>Очищает глобальные (снэпшоты не трогает) списки акторов и компонентов, но больше не делает ничего.</p>
+<h5 id="full-reset">Full Reset<a class="headerlink" href="#full-reset" title="Permanent link">&para;</a></h5>
+<p>Полная очистка, в том числе снэпшотов.</p>
+<h5 id="actors-selection">Actors Selection<a class="headerlink" href="#actors-selection" title="Permanent link">&para;</a></h5>
+<p>Список акторов на добавление/удаление для обработки инструментом.</p>
+<h5 id="light-properties-initial">Light Properties initial<a class="headerlink" href="#light-properties-initial" title="Permanent link">&para;</a></h5>
+<p>Снэпшот "дефолтных" настроек источников, с которыми они были добавлены в инструмент.</p>
+<h3 id="_2">Снэпшоты параметров<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h4 id="light-properties-snapshots">Light Properties Snapshots<a class="headerlink" href="#light-properties-snapshots" title="Permanent link">&para;</a></h4>
+<p><img alt="BP_LightSnapshotr_SnapshotsCommonParams.png" src="../attachments/BP_LightSnapshotr_SnapshotsCommonParams.png" style="border-radius: 5px" /></p>
+<p>Параметры со словом Multiplier в названии работают, ожидаемо, как множители соответствующих параметров всех источников света, принадлежащих данному снэпшоту<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<p>Использование нулевых значений приблизит значения параметров источников к нулю, но не сделает равными ему. Поэтому, кажущиеся отключенными параметры, можно исправить множителем большого значения.</p>
+<h6 id="colorshift">ColorShift<a class="headerlink" href="#colorshift" title="Permanent link">&para;</a></h6>
+<p><img alt="BP_LightSnapshotr_ColorShift.png" src="../attachments/BP_LightSnapshotr_ColorShift.png" style="border-radius: 5px" /></p>
+<p>Подраздел ColorShift работает аналогично предыдущим параметрам за исключением Hue.
+Изменение оттенка является именно что сдвигом значения в зацикленном диапазоне.</p>
+<h6 id="_3">Прочие общие параметры<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h6>
+<p><img alt="BP_LightSnapshotr_CommonMiscParams.png" src="../attachments/BP_LightSnapshotr_CommonMiscParams.png" style="border-radius: 5px" /></p>
+<p>Разумеется, снэпшот так же запоминает и управляет световыми каналами и активацией отбрасывания теней всех обрабатываемых источников.</p>
+<h5 id="_4">Индивидуальные параметры источников снэпшота<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
+<p><img alt="BP_LightSnapshotr_IndividualLightParams_All.png" src="../attachments/BP_LightSnapshotr_IndividualLightParams_All.png" style="border-radius: 5px" /></p>
+<p>В идеальном случае пользователю не придётся прибегать к редактированию параметров источника внутри снэпшота индивидуально, так как в текущей реализации это хоть и поддерживается, может быть весьма неудобно.</p>
+<p>Ниже будут приведены пояснения только к тем параметрам, изменение которых допустимо или может быть необходимо. </p>
+<h6 id="intensity">Intensity<a class="headerlink" href="#intensity" title="Permanent link">&para;</a></h6>
+<p>Изменение параметра интенсивности свечения данного источника напрямую, в обход группового множителя и нижней границы. Включается активацией параметра <strong>Override Intensity</strong></p>
+<h6 id="override-size">Override Size<a class="headerlink" href="#override-size" title="Permanent link">&para;</a></h6>
+<p>Активирует аналогичное прямое использование <a href="./#class-specific">классозависимых</a> параметров, отвечающих за размер источников, таких как <strong>Source Radius</strong>, <strong>Source <em>Soft</em> Radius</strong>, <strong>Source Length</strong>, <strong>Source Width</strong> и <strong>Source Height</strong>.</p>
+<h6 id="class-specific">Class Specific<a class="headerlink" href="#class-specific" title="Permanent link">&para;</a></h6>
+<p>Словарь соответствий параметр-значение (float) автоматически заполняющийся в зависимости от класса источника, в связи с чем, содержимое может варьироваться от источника к источнику. Что есть у RectLight может не быть у SpotLight и т.п.</p>
+<p><img alt="BP_LightSnapshotr_ClassSpecificParams.png" src="../attachments/BP_LightSnapshotr_ClassSpecificParams.png" style="border-radius: 5px" /></p>
+<h6 id="color">Color<a class="headerlink" href="#color" title="Permanent link">&para;</a></h6>
+<p>Цвет источника. Прямое изменение цвета в обход групповых надстроек, включается активацией параметра <strong>Override Color</strong>.</p>
+<h6 id="_5">Прочие индивидуальные параметры<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h6>
+<p><strong>Light Channels, Cast Shadows</strong> работают аналогично, обходя групповые надстройки при активации соответствующих Override-параметров. <strong>Transforms</strong> в подобном не нуждается и сразу записывается напрямую.</p>
+<p>Находящийся ниже список компонентов, выглядящий, возможно, бессмысленно на первый взгляд, ни в коем случае <span style="color:red">не трогать</span>. Пользователю он не нужен, но присутствовать для корректной работы должен.</p>
+<hr />
+<h4 id="_6">Условия выделения группы<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<h6 id="bypass-filtering">Bypass Filtering<a class="headerlink" href="#bypass-filtering" title="Permanent link">&para;</a></h6>
+<p>Активация этой настройки заставит инструмент пропускать стадию фильтрации акторов и компонентов при добавлении новых. Всё равно что сказать ему "Бери всех".</p>
+<h5 id="exclude-skylights">Exclude Skylights<a class="headerlink" href="#exclude-skylights" title="Permanent link">&para;</a></h5>
+<p>Настройка для исключения сбора Skylight компонентов. Наличествует обособленно из-за специфики их реализации в движке. По умолчанию включена.</p>
+<h5 id="select-by-layer">Select by Layer<a class="headerlink" href="#select-by-layer" title="Permanent link">&para;</a></h5>
+<p>Выбирать компоненты, чьи акторы находятся на указанном слое.</p>
+<h6 id="layer-name">Layer Name<a class="headerlink" href="#layer-name" title="Permanent link">&para;</a></h6>
+<p>Название слоя для фильтра выше.</p>
+<h5 id="select-by-actor-tag">Select by Actor Tag<a class="headerlink" href="#select-by-actor-tag" title="Permanent link">&para;</a></h5>
+<p>Выбирать компоненты, чьи акторы содержат заданный тег.</p>
+<h6 id="tag">Tag<a class="headerlink" href="#tag" title="Permanent link">&para;</a></h6>
+<p>Тег, используемый фильтром выше.</p>
+<h5 id="select-by-actor-prefix-name">Select by Actor Prefix Name<a class="headerlink" href="#select-by-actor-prefix-name" title="Permanent link">&para;</a></h5>
+<p>Выбирать компоненты, название акторов которых содержит заданный префикс.</p>
+<h6 id="name-prefix">Name Prefix<a class="headerlink" href="#name-prefix" title="Permanent link">&para;</a></h6>
+<p>Префикс, используемый фильтром выше.</p>
+<h4 id="_7">Анимация<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p><img alt="BP_LightSnapshotr_AnimParams.png" src="../attachments/BP_LightSnapshotr_AnimParams.png" style="border-radius: 5px" /></p>
+<h6 id="play-stop">Play, Stop<a class="headerlink" href="#play-stop" title="Permanent link">&para;</a></h6>
+<p>Кнопки запуска и остановки воспроизведения анимации перехода от текущей световой схемы к выбранной.</p>
+<h6 id="use-cheap-transition">Use Cheap Transition ✅<a class="headerlink" href="#use-cheap-transition" title="Permanent link">&para;</a></h6>
+<p>Переключает логику анимации перехода на использование дешёвой по производительности версии. В таком переходе между снэпшотами будут меняться только цвет и интенсивность свечения источников. По умолчанию активировано.</p>
+<h6 id="anim-curve">Anim Curve<a class="headerlink" href="#anim-curve" title="Permanent link">&para;</a></h6>
+<p>Используемый ассет кривой интерполяции для анимации. Определяет плавность течения трансформаций.</p>
+<h6 id="snapshot-to-transition-to">Snapshot to Transition To<a class="headerlink" href="#snapshot-to-transition-to" title="Permanent link">&para;</a></h6>
+<p>Снэпшот к которому осуществляется переход от текущего.</p>
+<h6 id="transition-anim-time">Transition Anim Time<a class="headerlink" href="#transition-anim-time" title="Permanent link">&para;</a></h6>
+<p>Желаемая длительность анимации в секундах.</p>
+<h6 id="use-tween-snapshot-for-animation">Use Tween Snapshot for Animation ✅<a class="headerlink" href="#use-tween-snapshot-for-animation" title="Permanent link">&para;</a></h6>
+<p>Переключает использование промежуточного снэпшота для перехода.</p>
+<details class="info">
+<summary>Пояснение</summary>
+<p>В активированном состоянии анимация длящаяся 1 сек. будет работать следующим образом:</p>
+<p><strong>A</strong>--0.5s&rarr;<strong>B</strong>--0.5s&rarr;<strong>C</strong>, где <strong>A</strong> и <strong>C</strong> - начальный и конечный снэпшоты, а <strong>B</strong> - промежуточный (Tween). </p>
+<p><span class="arithmatex">\(\quad\)</span>То есть, если мы переходим из <span style="color:red">красного</span> цвета в <span style="color:hsl(203, 100%, 56%)">синий</span>, то переход будет осуществлён через фазу цвета переходного снэпшота, например белый.</p>
+</details>
+<h6 id="tween-snapshot-selection">Tween Snapshot Selection<a class="headerlink" href="#tween-snapshot-selection" title="Permanent link">&para;</a></h6>
+<p>Промежуточный снэпшот для анимации перехода.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><em>"Данному снэпшоту"</em> так как инструмент обрабатывает ссылки на компоненты сохранённые в снэпшоте, сверяя их с общим списком компонентов, зарегистрированных в инструменте. В случае, если источник не будет найден в снэпшоте, параметры его изменены не будут.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../../_assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      
+        <script src="../../../_assets/javascripts/obsidian_tags.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

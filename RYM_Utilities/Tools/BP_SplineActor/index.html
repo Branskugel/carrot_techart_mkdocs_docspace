@@ -1,0 +1,2175 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="RYM">
+      
+      
+      
+        <link rel="prev" href="../BP_SolidSplineCloner/">
+      
+      
+        <link rel="next" href="../ConvertAnimToBones/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>BP_SplineActor - Carrot tech art docspace</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../_assets/css/obsidian_tags.css">
+    
+      <link rel="stylesheet" href="../../../_assets/css/obsidian_headers.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bp_splineactor" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Carrot tech art docspace" class="md-header__button md-logo" aria-label="Carrot tech art docspace" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Carrot tech art docspace
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              BP_SplineActor
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Carrot tech art docspace" class="md-nav__button md-logo" aria-label="Carrot tech art docspace" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Carrot tech art docspace
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Главная
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Articles
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Articles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Articles/A_bit_on_materials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Немного о материалах
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Articles/CreateEmptyHierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Организация сцены иерархией пустышек
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Articles/Drawing_World_Position_Masks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Рисование масок в мировых координатах
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Articles/HowTo_FindSplineTools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Как быстро найти Spline инструменты в плагине
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Articles/ImportBlenderBezierToUnreal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ипорт кривых Bezier из Blender в Unreal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Articles/Shader_Spline_Animation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Шейдерная анимация по сплайну
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Articles/TP_KRD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Шаблон проекта TP_KRD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    BlenderAddOns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            BlenderAddOns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Articles/BlenderAddOns/SimpleRenamingPanel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SimpleRenamingPanel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    RYM Utilities
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            RYM Utilities
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RYM_Utils_Changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    История изменений
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BP_DeformSplineCloner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BP_DeformSplineCloner
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BP_LightSnapshotr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BP_LightSnapshotr
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BP_RandomInstanceShaderGrid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BP_RandomInstanceShaderGrid
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BP_SolidSplineCloner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BP_SolidSplineCloner
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    BP_SplineActor
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    BP_SplineActor
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#work-proccess" class="md-nav__link">
+    <span class="md-ellipsis">
+      Алгоритм работы:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Алгоритм работы:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#animation-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Настройки анимации
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Кнопки
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Кнопки">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#playpausestopreverse-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Play/Pause/Stop/Reverse Animation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nextprevious-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next/Previous Stop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Параметры
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Параметры">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auto-play" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto play
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-animation-curve" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Animation Curve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-animation-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Animation Time
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-current-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Current Stop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-direction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Direction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#affect-rotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Affect Rotation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prerotation-angle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerotation Angle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spline-rotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spline Rotation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roll-axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Roll Axis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spline-roll" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spline Roll
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rollmultiplier" class="md-nav__link">
+    <span class="md-ellipsis">
+      RollMultiplier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measure-velocity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measure Velocity?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stop Index
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tick-rate-to-50fps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tick Rate to 50fps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweep-teleport" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sweep, Teleport
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-parent-spline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Parent Spline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-external-spline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use External Spline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-spline-actor" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Spline Actor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editor-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editor Position
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stops
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stops">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#useglobalanimationcurve" class="md-nav__link">
+    <span class="md-ellipsis">
+      UseGlobalAnimationCurve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animationcurve" class="md-nav__link">
+    <span class="md-ellipsis">
+      AnimationCurve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animationtimefromspeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      AnimationTimeFromSpeed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Speed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-finish" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start, Finish
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loopdelay" class="md-nav__link">
+    <span class="md-ellipsis">
+      LoopDelay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useglobalanimationtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      UseGlobalAnimationTime
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ConvertAnimToBones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Костяная нога (Blender addon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ExportBlenderBezierToUnrealCSV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Экспортер кривых Bezier в CSV (Blender addon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MC_FollowSpline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MC_FollowSpline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MC_NoiseTransform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MC_NoiseTransform
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MC_Pong/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MC_Pong
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MMF_YegorFX/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MMF_YegorFX
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Scripted_Actions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scripted Actions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SplineBaker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SplineBaker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SplinePath/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SplinePath
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    WPanel
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            WPanel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WPanel/BlueprintUnpacker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Распаковка блюпринтов
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WPanel/ConsoleCommands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Консольные команды
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WPanel/FixBounds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Исправление пропадашек
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WPanel/FolderStructure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Создание структуры папок
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WPanel/Helpers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Вспомогашки
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WPanel/InstanceUnbaker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Распекание инстансов
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WPanel/Selectorr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Выделятор
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WPanel/TagBox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Тэгбокс
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#work-proccess" class="md-nav__link">
+    <span class="md-ellipsis">
+      Алгоритм работы:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Алгоритм работы:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#animation-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Настройки анимации
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Кнопки
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Кнопки">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#playpausestopreverse-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Play/Pause/Stop/Reverse Animation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nextprevious-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next/Previous Stop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Параметры
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Параметры">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auto-play" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto play
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-animation-curve" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Animation Curve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-animation-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Animation Time
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-current-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Current Stop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-direction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Direction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#affect-rotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Affect Rotation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prerotation-angle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerotation Angle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spline-rotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spline Rotation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roll-axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Roll Axis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spline-roll" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spline Roll
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rollmultiplier" class="md-nav__link">
+    <span class="md-ellipsis">
+      RollMultiplier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measure-velocity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measure Velocity?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stop Index
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tick-rate-to-50fps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tick Rate to 50fps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweep-teleport" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sweep, Teleport
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-parent-spline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Parent Spline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-external-spline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use External Spline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-spline-actor" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Spline Actor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editor-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editor Position
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stops
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stops">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#useglobalanimationcurve" class="md-nav__link">
+    <span class="md-ellipsis">
+      UseGlobalAnimationCurve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animationcurve" class="md-nav__link">
+    <span class="md-ellipsis">
+      AnimationCurve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animationtimefromspeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      AnimationTimeFromSpeed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Speed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-finish" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start, Finish
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loopdelay" class="md-nav__link">
+    <span class="md-ellipsis">
+      LoopDelay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useglobalanimationtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      UseGlobalAnimationTime
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="bp_splineactor">BP_SplineActor<a class="headerlink" href="#bp_splineactor" title="Permanent link">&para;</a></h1>
+<p><strong class="hash">RYM_Utilities</strong></p>
+<div class="admonition abstract">
+<p class="admonition-title">Ситуация</p>
+<p>Вам нужно запустить объект в движение по определённой траектории, возможно с остановками (движение по секторам) по пути. Это может быть обычный предмет, самолёт совершающий манёвр, ракета и пр.</p>
+</div>
+<p><span class="arithmatex">\(\quad\)</span>Для этой цели вполне подойдёт <em>BP_SplineActor</em>. Это "шаблонный" актор, в котором реализована полноценная, достаточно функциональная, но не слишком сложная логика передвижения по траектории сплайна. Он работает с <strong><em>любым</em></strong> сплайном, но лучше всего раскрывается в паре с моим <em><a href="../SplinePath/">SplinePath</a></em>, так как реализует его кастомную логику продольного вращения не привязанного к точкам образующим сплайн.</p>
+<h2 id="work-proccess">Алгоритм работы:<a class="headerlink" href="#work-proccess" title="Permanent link">&para;</a></h2>
+<p><a href="../../../Articles/HowTo_FindSplineTools/">Найдите в плагине</a> BP_SplineActor и скопируйте к себе в папку.</p>
+<details class="note">
+<summary>Примечание</summary>
+<p>Лучше всего сделать это, чтобы в будущем была возможность модифицировать его поведение независимо от плагина, потому что любые изменения в версии плагина, не будут передаваться вместе с мигрейтом.</p>
+</details>
+<p><img alt="Описание ассета" src="../attachments/BP_SplineActor_description_UE5.2.png" style="border-radius: 5px" /></p>
+<p><span class="arithmatex">\(\quad\)</span> Если планируется двигать много разных объектов, но без изменения логики, то <strong>добавить свой объект</strong> можно даже на экземпляре блюпринта на уровне, чтобы иметь гибкость использовать один и тот же класс блюпринта для вызова его функций у "разных" объектов. <em>Однако</em>, в случае уникального объекта со своими нюансами и изменениями логики, лучше сделать это изнутри. По сплайну двигается компонент SplineFollower и всё что приаттачено к нему.</p>
+<p><img alt="Иерархия" src="../attachments/BP_SplineActor_hierarchy_UE5.2.png" style="border-radius: 5px" /></p>
+<p>Поэтому, ваш компонент должен быть так же приаттачен к <em>AttachTransform</em>, чтобы вы имели максимальную гибкость в настройке трансформов своего компонента. Если это должен быть уже готовый блюпринт, который ещё и может быть подвержен воздействию других компонентов, то можно добавить его в качестве <em>ChildActor</em> компонента.</p>
+<ol>
+<li>Переименуйте свою версию ассета BP_SplineActor в контент браузере в соответствии с содержимым и нуждами, чтобы не было дублирования с версией в плагине. Если этот блюпринт используется как шаблон для множества объектов на уровне, то можно ограничиться добавлением суффикса из вашего имени (например) к названию.</li>
+<li>Забросьте свой новый блюпринт на уровень со сплайном - другими словами создайте его экземпляр (инстанс).</li>
+<li>Если объект неправильно повёрнут, компенсируем поворот параметром Prerotation Angle или поворачиваем компонент <em>AttachTransform</em> (или сам меш) желаемым образом. В случае неудачного расположения пивота объекта относительно сплайна, можно так же его и подвинуть.</li>
+<li>Если нужно продольное вращение (вдоль оси движения), то можно активировать параметр Spline Roll.</li>
+<li>Для предпросмотра положения объекта на определённом участке сплайна используйте параметр <a href="./#editor-position">Editor Position</a>.</li>
+<li>Далее можно настроить <a href="./#stops">остановки</a> Или, для начала, углубиться в настройку анимации под свою задачу.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Как использовать другой сплайн</p>
+<p>При желании можно использовать сплайн другого актора, например <a href="../SplinePath/">SplinePath</a></p>
+<ol>
+<li>Приаттачте к актору со сплайном экземпляр своего блюпринта.</li>
+<li>Сбросьте его трансформы.</li>
+<li>Нажмите кнопку <a href="./#get-parent-spline">Get Parent Spline</a> чтобы не указывать сплайн вручную.</li>
+</ol>
+</div>
+<h3 id="animation-settings">Настройки анимации<a class="headerlink" href="#animation-settings" title="Permanent link">&para;</a></h3>
+<p>Итак, перед вами длинная панель настроек, но всё не так страшно как может показаться.</p>
+<p><img alt="BP_SplineActor_AnimationSettings_UE5.2.png" src="../attachments/BP_SplineActor_AnimationSettings_UE5.2.png" style="border-radius: 5px" /></p>
+<h3 id="buttons">Кнопки<a class="headerlink" href="#buttons" title="Permanent link">&para;</a></h3>
+<h4 id="playpausestopreverse-animation">Play/Pause/Stop/Reverse Animation<a class="headerlink" href="#playpausestopreverse-animation" title="Permanent link">&para;</a></h4>
+<p>Обычное управление анимацией</p>
+<h4 id="nextprevious-stop">Next/Previous Stop<a class="headerlink" href="#nextprevious-stop" title="Permanent link">&para;</a></h4>
+<p>Ручное переключение остановок, полезно при отключенном <em>Loop</em></p>
+<h3 id="parameters">Параметры<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
+<h4 id="auto-play">Auto play<a class="headerlink" href="#auto-play" title="Permanent link">&para;</a></h4>
+<p>Автоматическое включение анимации при старте игры.</p>
+<h4 id="global-animation-curve">Global Animation Curve<a class="headerlink" href="#global-animation-curve" title="Permanent link">&para;</a></h4>
+<p>Глобальная кривая интерполяции времени (скорости) движения. Может быть использована вместо кривой заложенной в сектор. </p>
+<h4 id="global-animation-time">Global Animation Time<a class="headerlink" href="#global-animation-time" title="Permanent link">&para;</a></h4>
+<p>Глобальное время анимации. Может быть использовано вместо времени определённого в секторе.</p>
+<h4 id="loop">Loop?<a class="headerlink" href="#loop" title="Permanent link">&para;</a></h4>
+<p>Зациклить анимацию. По умолчанию автопродолжающийся - переключает последовательно остановки (сектора).</p>
+<h4 id="loop-current-stop">Loop Current Stop<a class="headerlink" href="#loop-current-stop" title="Permanent link">&para;</a></h4>
+<p>Отключает автопродолжение цикла и зацикливает только текущий выбранный сектор.</p>
+<h4 id="loop-direction">Loop Direction<a class="headerlink" href="#loop-direction" title="Permanent link">&para;</a></h4>
+<p>Направление автопродолжающегося цикла.</p>
+<h4 id="affect-rotation">Affect Rotation<a class="headerlink" href="#affect-rotation" title="Permanent link">&para;</a></h4>
+<p>Включить влияние логики на поворот объекта.</p>
+<h4 id="prerotation-angle">Prerotation Angle<a class="headerlink" href="#prerotation-angle" title="Permanent link">&para;</a></h4>
+<p>Угол постоянной поправки поворота объекта.</p>
+<h4 id="spline-rotation">Spline Rotation<a class="headerlink" href="#spline-rotation" title="Permanent link">&para;</a></h4>
+<p>Направлять объект вдоль сплайна.</p>
+<h4 id="roll-axis">Roll Axis<a class="headerlink" href="#roll-axis" title="Permanent link">&para;</a></h4>
+<p>Ось объекта, по которой применять продольное вращение сплайна (Roll).</p>
+<h4 id="spline-roll">Spline Roll<a class="headerlink" href="#spline-roll" title="Permanent link">&para;</a></h4>
+<p>Добавлять к вращению объекта продольное вращение сплайна.</p>
+<h4 id="rollmultiplier">RollMultiplier<a class="headerlink" href="#rollmultiplier" title="Permanent link">&para;</a></h4>
+<p>Множитель интенсивности продольного вращения. Выведено для простой корректировки на всей протяжённости движения.</p>
+<h4 id="measure-velocity">Measure Velocity?<a class="headerlink" href="#measure-velocity" title="Permanent link">&para;</a></h4>
+<p>Активирует логику измерения скорости движения. Может быть полезно для использования с дополнительной логикой.</p>
+<h4 id="stop-index">Stop Index<a class="headerlink" href="#stop-index" title="Permanent link">&para;</a></h4>
+<p>Порядковый номер сектора. Этот параметр трогать <u>не нужно</u>, он просто визуализирует текущее состояние.</p>
+<h3 id="advanced">Advanced<a class="headerlink" href="#advanced" title="Permanent link">&para;</a></h3>
+<p><img alt="BP_SplineActor_AnimationAdvancedSettings_UE5.2.png" src="../attachments/BP_SplineActor_AnimationAdvancedSettings_UE5.2.png" style="border-radius: 5px" /></p>
+<h4 id="tick-rate-to-50fps">Tick Rate to 50fps<a class="headerlink" href="#tick-rate-to-50fps" title="Permanent link">&para;</a></h4>
+<p>Синхронизировать частоту тика объекта с частотой в 50fps, чтобы избежать лишних вычислений. Может пригодиться при оптимизации, но дёргано выглядит при 120fps в редакторе. По умолчанию отключено и спрятано в сворачиваемую секцию.</p>
+<h4 id="sweep-teleport">Sweep, Teleport<a class="headerlink" href="#sweep-teleport" title="Permanent link">&para;</a></h4>
+<p>Опциональные переключатели учёта коллизий объекта. Взято напрямую из ноды Set Location и возможно не работает. Нужны тесты.</p>
+<h3 id="spline">Spline<a class="headerlink" href="#spline" title="Permanent link">&para;</a></h3>
+<p><img alt="BP_SplineActor_ExternalSpline_UE5.2.png" src="../attachments/BP_SplineActor_ExternalSpline_UE5.2.png" style="border-radius: 5px" /></p>
+<h4 id="get-parent-spline">Get Parent Spline<a class="headerlink" href="#get-parent-spline" title="Permanent link">&para;</a></h4>
+<p>Автоматически найдёт сплайн у актора родительского для этого актора. Назначит находку в свойство <strong>External Spline Actor</strong>.</p>
+<h4 id="use-external-spline">Use External Spline<a class="headerlink" href="#use-external-spline" title="Permanent link">&para;</a></h4>
+<p>Переключает на использование сплайна другого актора, при наличии такового</p>
+<h4 id="external-spline-actor">External Spline Actor<a class="headerlink" href="#external-spline-actor" title="Permanent link">&para;</a></h4>
+<p>Актор со сплайн-компонентом, движение по которому нужно осуществить</p>
+<h4 id="editor-position">Editor Position<a class="headerlink" href="#editor-position" title="Permanent link">&para;</a></h4>
+<p>Положение объекта вдоль кривой в процентах от длины сплайна. Используется для быстрого предпросмотра состояний объекта на разных участках сплайна.</p>
+<hr />
+<h3 id="stops">Stops<a class="headerlink" href="#stops" title="Permanent link">&para;</a></h3>
+<p>сектора/остановки</p>
+<p><img alt="BP_SplineActor_Stops_UE5.2.png" src="../attachments/BP_SplineActor_Stops_UE5.2.png" style="border-radius: 5px" /></p>
+<p>По сути, это настраиваемые участки движения.</p>
+<p><img alt="Stops" src="../attachments/BP_SplineActor_Stops_Buttons_UE5.2.png" style="border-radius: 5px" /></p>
+<p><code>Этими кнопками можно управлять кол-вом остановок: создавать новые, дублировать имеющиеся, удалять ненужные.</code></p>
+<h4 id="useglobalanimationcurve">UseGlobalAnimationCurve<a class="headerlink" href="#useglobalanimationcurve" title="Permanent link">&para;</a></h4>
+<p>Использовать <a href="./#global-animation-curve">глобальную кривую анимации</a></p>
+<h4 id="animationcurve">AnimationCurve<a class="headerlink" href="#animationcurve" title="Permanent link">&para;</a></h4>
+<p>Ассет кривой для интерполяции скорости/времени анимации этого сектора</p>
+<h4 id="animationtimefromspeed">AnimationTimeFromSpeed<a class="headerlink" href="#animationtimefromspeed" title="Permanent link">&para;</a></h4>
+<p>Использовать значение скорости (Speed) для вычисления времени анимирования объекта по этому сектору. Технически, это отвязывает скорость движения объекта от длины сплайна. Естественно время движения при этом будет меняться в соответствии с длиной пути и скоростью.</p>
+<h4 id="speed">Speed<a class="headerlink" href="#speed" title="Permanent link">&para;</a></h4>
+<p>Скорость движения объекта в анриаловских (по идее) единицах в секунду при включённом AnimationTimeFromSpeed.</p>
+<h4 id="stop">Stop<a class="headerlink" href="#stop" title="Permanent link">&para;</a></h4>
+<p>Настройки сектора</p>
+<p><img alt="BP_SplineActor_Stops_DoNotTouch_UE5.2.png" src="../attachments/BP_SplineActor_Stops_DoNotTouch_UE5.2.png" style="border-radius: 5px" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Важно!</p>
+<p>Добавлять, удалять или переименовывать пункты <span style="color:#ff0000"><u>нельзя.</u></span> Эти кнопки не трогаем. Только меняем числовые значения полей</p>
+</div>
+<h4 id="start-finish">Start, Finish<a class="headerlink" href="#start-finish" title="Permanent link">&para;</a></h4>
+<p>Точки на сплайне в процентах от длины кривой, между которыми осуществляется движение.</p>
+<h4 id="time">Time<a class="headerlink" href="#time" title="Permanent link">&para;</a></h4>
+<p>Время затрачиваемое на движение.</p>
+<h4 id="loopdelay">LoopDelay<a class="headerlink" href="#loopdelay" title="Permanent link">&para;</a></h4>
+<p>Пауза до перехода к анимации по следующему сектору при включённой опции Loop.</p>
+<h4 id="useglobalanimationtime">UseGlobalAnimationTime<a class="headerlink" href="#useglobalanimationtime" title="Permanent link">&para;</a></h4>
+<p>Использовать <a href="./#global-animation-time">глобальное значение времени анимации</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../../_assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      
+        <script src="../../../_assets/javascripts/obsidian_tags.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
